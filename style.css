@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+  background-color: #dcdcdc;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #716c6c;
+}
+
+.title {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #456a8d;
+  display: flex;
+  flex-direction: column;
+}
+
+.title > h1 {
+  font-size: 45px;
+}
+
+.title > h1,
+.title {
+  text-align: center;
+}
+
+.pexel_link {
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #716c6c;
+}
+
+.time-difficulty {
+  position: absolute;
+  top: 18px;
+  left: 32px;
+}
+
+.moves-points {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+}
+
+.time,
+.moves {
+  margin-bottom: 3px;
+}
+
+.count-down,
+.move,
+.point {
+  font-size: 20px;
+  color: #456a8d;
+}
+
+.difficulty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.difficulty > p,
+.difficulty > select {
+  margin-right: 12px;
+}
+
+select {
+  font-size: 16px;
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid #456a8d;
+  border-radius: 5px;
+  color: #456a8d;
+  cursor: pointer;
+}
+
+select:focus,
+.btn:focus {
+  outline: none;
+}
+
+.btn {
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: #456a8d;
+  padding: 5px 12px;
+  color: #dcdcdc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5a7898;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.game-container {
+  width: 100%;
+  height: calc(100vh - 110px);
+  margin: auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 8px;
+}
+
+.card {
+  height: 215px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.inner-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
+  text-align: center;
+  font-size: 45px;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgb(0, 0, 0, 0.7);
+}
+
+.inner-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-card,
+.back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+.front-card {
+  background-color: #716c6c;
+  border-radius: 8px;
+}
+
+.back-card {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
