@@ -5,7 +5,6 @@ const move = document.getElementById("move");
 const points_el = document.getElementById("point");
 const count = document.getElementById("count-down");
 const select = document.getElementById("difficulty");
-const modal = document.getElementById("modal");
 let points = 0;
 let moves = 0;
 let hasFlippedCard = false;
@@ -13,20 +12,12 @@ let lockGame = false;
 let firstCard;
 let secondCard;
 let interval;
-const API_KEY = config.API_KEY;
 
 enter.addEventListener("click", startGame);
 
 // Fetch photos from Pexel API
 async function getPhotos() {
-  const res = await fetch(
-    `https://api.pexels.com/v1/search?query=nature&per_page=6`,
-    {
-      headers: {
-        Authorization: `${API_KEY}`,
-      },
-    }
-  );
+  const res = await fetch("/.netlify/functions/fetch");
 
   const data = await res.json();
 
