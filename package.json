@@ -1,0 +1,23 @@
+{
+  "name": "pexelsapp",
+  "version": "1.0.0",
+  "description": "Memory card game with a timer, keeps track of moves, and points. This game was built following this tutorial: [Memory Card Game - JavaScript Tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1841s).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mMartinez00/Memory-Card-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mMartinez00/Memory-Card-Game/issues"
+  },
+  "homepage": "https://github.com/mMartinez00/Memory-Card-Game#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}

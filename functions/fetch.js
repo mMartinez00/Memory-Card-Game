@@ -1,4 +1,6 @@
-exports.handler = async () => {
+import fetch from "node-fetch";
+
+async function getPictures() {
   const API_KEY = process.env.PEXEL_API_KEY;
 
   const response = await fetch(
@@ -9,10 +11,24 @@ exports.handler = async () => {
       },
     }
   );
+
   const data = await response.json();
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify(data),
-  };
+  return JSON.stringify(data);
+}
+
+exports.handler = async (event, context) => {
+  try {
+    const body = await getPictures();
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(body),
+    };
+  } catch (err) {
+    return {
+      statusCode: 500,
+      body: err.toString(),
+    };
+  }
 };
