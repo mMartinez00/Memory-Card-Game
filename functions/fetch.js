@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+const fetch = require("node-fetch");
 
 async function getPictures() {
   const API_KEY = process.env.PEXEL_API_KEY;
@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify(body),
+      body: body,
     };
   } catch (err) {
     return {
