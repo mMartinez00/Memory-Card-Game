@@ -8,35 +8,39 @@
   </head>
   <body>
     <header class="header">
-      <div class="time-difficulty">
-        <p class="time" id="time">
+      <div class="header__options">
+        <p class="header__count-down">
           Time: <span class="count-down" id="count-down"></span>
         </p>
 
-        <div class="difficulty">
-          <p>Difficulty:</p>
+        <div class="header__difficulty-container">
+          <p class="header__difficulty">Difficulty:</p>
 
-          <select id="difficulty">
+          <select class="header__difficulty-options" id="options">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
           </select>
 
-          <button id="enter-btn" class="btn">Enter</button>
+          <button class="button" id="button">Enter</button>
         </div>
       </div>
 
-      <div class="title">
-        <h1>Memory Card Game</h1>
-        <a class="pexel_link" href="https://www.pexels.com"
+      <div class="header__title-container">
+        <h1 class="header__title">Memory Card Game</h1>
+        <a class="header__link" href="https://www.pexels.com"
           >Photos provided by Pexels</a
         >
       </div>
 
-      <div class="moves-points">
-        <p class="moves">Moves: <span class="move" id="move">0</span></p>
+      <div class="header__stats">
+        <p class="header__moves">
+          Moves: <span class="moves" id="moves">0</span>
+        </p>
 
-        <p class="points">Points: <span class="point" id="point">0</span></p>
+        <p class="header__points">
+          Points: <span class="points" id="points">0</span>
+        </p>
       </div>
     </header>
 
