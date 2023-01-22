@@ -1,9 +1,9 @@
 const cards = document.querySelectorAll(".card");
 const images = document.querySelectorAll(".image");
 const enter = document.getElementById("button");
-const move = document.getElementById("move");
-const points_el = document.getElementById("point");
-const count = document.getElementById("count-down");
+const move = document.getElementById("moves");
+const points_el = document.getElementById("points");
+const count_down = document.getElementById("count-down");
 const select = document.getElementById("options");
 let points = 0;
 let moves = 0;
@@ -95,13 +95,13 @@ function startTimer(time) {
     time--;
 
     if (time === 0) {
-      count.innerText = 0;
+      count_down.innerText = 0;
       clearInterval(interval);
 
       cards.forEach((card) => card.removeEventListener("click", flipCard));
     }
 
-    count.innerText = time;
+    count_down.innerText = time;
   }, 1000);
 }
 
